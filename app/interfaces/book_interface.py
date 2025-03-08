@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-class Book(ABC):
+class BookInterface(ABC):
     @abstractmethod
     def get_title(self) -> str:
         pass

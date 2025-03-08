@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
+from app.interfaces.book_interface import BookInterface
 
 
-class Reader(ABC):
+class ReaderInterface(ABC):
     @abstractmethod
     def get_name(self) -> str:
         pass
@@ -15,5 +16,5 @@ class Reader(ABC):
         pass
 
     @abstractmethod
-    def get_borrowed_books(self) -> List[Book]:
+    def get_borrowed_books(self) -> list[BookInterface]:
         pass
