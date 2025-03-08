@@ -64,7 +64,7 @@ class LibraryManagementSystemCLI:
             return
 
         # Check if the book is already lent to another reader
-        if book.is_lent():
+        if not book.available:
             print(f"Book '{title}' is already lent to another reader.")
             return
 
@@ -89,7 +89,7 @@ class LibraryManagementSystemCLI:
             return
 
         # Check if the book is currently lent
-        if not book.is_lent():
+        if not book.available:
             print(f"Book '{title}' has not been lent out.")
             return
 
